@@ -1,0 +1,28 @@
+about
+------------
+
+this boilerplate illustrates how we can use click to build a configurable cli-interface for a lambda program.
+
+usage
+-----------
+  $ pip install --editable .
+  $ click_app_build --help
+
+* pip install ... to launch the setup-tools.py thingy & add a bin to `.local/bin/complex`, could customize & rename that to myprog so we have `.local/bin/myprog`
+* to add new commands to the program, add the relevent `cmd_[cmd_name].py` into the `complex` subdir.
+* name of any new command will be like:
+    * `[appname] mynewcommand [args, options]`
+
+notes
+----------
+
+* the cli part expects the project to be structured this way:
+    /proj_root
+        |-/application
+                |-(app code)
+        |-/click_code
+                |-/complex
+                setup.py
+        cli_main.py
+        setup.py
+        [appname.egg-info]              # once setup tool has been run

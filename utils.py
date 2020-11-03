@@ -1,0 +1,1 @@
+CLI_CMDS_RELPATH    = "click_code/commands"
